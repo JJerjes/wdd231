@@ -128,11 +128,7 @@ function displayCourses(course) {
         const nameSubject = document.createElement('button');
         nameSubject.textContent = `${element.subject} ${element.number}`;
 
-        const titleSubject = document.createElement('h3');
-        titleSubject.textContent = element.title;
-
         cardCourse.appendChild(nameSubject);
-        cardCourse.appendChild(titleSubject);
 
         card.appendChild(cardCourse);
     });
@@ -154,10 +150,8 @@ document.querySelector('#cse').addEventListener('click', () => {
 document.querySelector('#wdd').addEventListener('click', () => {
     const wddcourses = courses.filter(course => course.subject === 'WDD');
     displayCourses(wddcourses);
-    document.querySelector('.certificate-buttons buttons').textContent = 'WDD';
+    document.querySelector('.certificate-buttons button').textContent = 'All';
 });
-
-
 
 document.querySelector('#cse110').addEventListener('click', () => {
     const cse110Course = courses.filter(course => course.subject === 'CSE' && course.number === 110);

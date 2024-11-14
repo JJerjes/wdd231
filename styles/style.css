@@ -92,6 +92,7 @@ nav.active ~ main {
 /*MAIN*/
 
 main div {
+    max-width: 1300px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -159,7 +160,7 @@ main div {
 #card {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--fourth-color); 
     box-shadow: 0 0 5px;      
      
@@ -261,8 +262,9 @@ footer p {
 
     #menu {
         display: block;
-        top: -100px;
-        left: 250px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
         font-size: 30px;
         color: var(--second-color);
         
@@ -279,38 +281,22 @@ footer p {
         background: var(--fourth-color);
     }
 
+    .certificate-buttons {
+        color: var(--second-color);
+        display: flex; 
+        text-align: center;
+        flex-direction: row; 
+    }
+
     #card {
         display: grid;
         align-items: center;
         grid-template-columns: 1fr;
         box-shadow: 0 0 5px;        
     }
-    
 
     main div{
         flex-direction: column;
-    }
-
-    .certificate-buttons {
-        display: inline;
-
-    }   
-    
-    .course-buttons {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(1, 6fr);                        
-        justify-items: center;               
-        align-items: center;   
-                  
-    }    
-
-    .course-buttons button {
-        width: 450px;
-        padding:20px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
     }
 
     footer {
