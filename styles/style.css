@@ -15,9 +15,7 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px auto 80px;
+
     font-family: 'Montserrat', sans-serif;
 }
 /*HEADER*/
@@ -87,10 +85,10 @@ nav a:hover {
     content: "✖️";
 }
 nav.active ~ main {
-    margin-top: 300px;
+    margin-top: 100px;
 }
-/*MAIN*/
 
+/*MAIN*/
 main div {
     max-width: 1300px;
     display: flex;
@@ -123,9 +121,7 @@ main div {
     margin-bottom: 5px;
 }
 
-
 /*Peru, Lima*/
-
 .lima-peru {
     flex: 30%;
     display: flex;
@@ -156,35 +152,43 @@ main div {
     text-align: center;
 }
 
-/*Certificate*/
 #card {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid var(--fourth-color); 
-    box-shadow: 0 0 5px;      
-     
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 0;
+    border: 1px solid var(--fourth-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#card > div {
+    flex: 0 1 22%;
+    min-width: 100px; 
+}
+
+.div {
+    display: block;
 }
 
 .certificate h2 {
     text-align: center;
     color: var(--second-color);
     background-color: var(--primary-color);
-    width: 100%;
+   
     padding: 10px;
     border: 1px solid var(--fourth-color)
-    
 }
 
 .certificate-buttons {
     color: var(--second-color);
-    justify-content: center;  
+    justify-content: center;
 }
 
 .certificate-buttons button {
     padding: 10px 20px;
-    font-size: 1.1rem;
-    width: 250px;
+    font-size: 1rem;
+    width: 100px;
     cursor: pointer;
     color: var(--second-color);
     background-color: var(--fourth-color);
@@ -195,38 +199,6 @@ main div {
     color: var(--fifth-color);
 }
 
-/*COURSES*/
-
-.courses {
-    display: flex;
-    flex-direction: column;           
-    justify-content: center;
-    align-items: center;    
-    width: 100%;                              
-}
-
-.course-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto);    
-    width: 100%;         
-    justify-items: center;               
-    align-items: center;                  
-}
-
-.course-buttons button {
-    width: 350px;
-    padding:20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.course-buttons button:hover {
-    color: var(--second-color);
-    background-color: var(--thrid-color);
-}
-
 /*FOOTER*/
 
 footer {
@@ -234,7 +206,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;   
+    padding: 10px;
     color: var(--second-color);
     background-color: var(--primary-color);
 }
@@ -250,7 +222,7 @@ footer p {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 120px;
+        top: 104px;
         background-color: var(--primary-color);
         text-align: center;
         width: 100%;
@@ -267,7 +239,7 @@ footer p {
         right: 20px;
         font-size: 30px;
         color: var(--second-color);
-        
+
     }
 
     nav a {
@@ -283,18 +255,29 @@ footer p {
 
     .certificate-buttons {
         color: var(--second-color);
-        display: flex; 
+        display: flex;
         text-align: center;
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     #card {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr;
-        box-shadow: 0 0 5px;        
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-content: center;
+        border: 1px solid var(--fourth-color);
+        width: 100%;
     }
 
+    .card-course button {
+        width: 300px;
+        padding: 20px;
+    }
+
+    #card > div {
+        flex: 0 0 0%;
+    }
+    
     main div{
         flex-direction: column;
     }

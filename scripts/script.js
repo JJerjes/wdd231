@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuButton.classList.toggle('open')
 
         if(nav.classList.contains('active')) {
-            main.style.marginTop = '170px';
+            main.style.marginTop = '160px';
         }else {
             main.style.marginTop = '0';
         }
