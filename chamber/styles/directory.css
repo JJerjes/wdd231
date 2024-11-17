@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Gemunu+Libre:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #2eed2e;
+    --second-color: #fff;
+    --third-color: #4e3e3e35;
+    --fourth-color: #0000001a;
+    --fifth-color: #ddd;
+    --sixth-color: #007f13;
+    --seventh-color: #0000ff;
+    --eighth-color: #007f13;
+    --ninth-color: #005d0f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 50px auto 30px;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 20px;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    border-radius: 30px;
+}
+
+h1 {
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: '❌';
+}
+
+#menu {
+    display: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: var(--primary-color);
+}
+
+nav a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: var(--third-color);
+    color: var(--second-color);
+}
+
+.menu {
+    margin: 1rem auto;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--fourth-color);
+}
+
+.menu button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.menu button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: var(--eighth-color);
+}
+
+.menu button.active {
+    background-color: var(--ninth-color); 
+}
+
+
+#names.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#names.list {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#names.list .member-card img {
+    display: none;
+}
+
+.member-card {
+    border: 1px solid var(--fifth-color);
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--second-color);
+    margin: 10px 0;
+    box-shadow: 0 0 5px var(--third-color);
+}
+
+.member-card h3 {
+    color: var(--sixth-color);
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+.member-card a {
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.member-card a:hover {
+    font-weight: bold;
+    color: var(--seventh-color);
+}
+
+.member-card img {
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px;
+}
+
+footer {
+    max-width: 100%;
+    height: 100px;
+    text-align: center;
+    color: var(--second-color);
+    font-weight: bold;
+    align-content: center;
+    background-color: var(--primary-color);
+}
+
+/*MEDIA*/
+
+@media (max-width:768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;      
+        top: 170px;
+        box-shadow: 0 4px 6px var(--fourth-color);
+    }
+
+    #menu {
+        display: block;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav.open a:hover {
+        background-color: var(--third-color);
+        color: white;
+    }
+}

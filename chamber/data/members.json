@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Vivanda",
+            "address": "Av. José Pardo 715, Lima, Perú",
+            "phoneNumber": "(01) 620-3000",
+            "website": "https://www.vivanda.com.pe/",
+            "image": "../images/vivanda.webp",
+            "memberLevel": 1,
+            "email": "servicioalcliente@vivanda.com"
+        },
+        {
+            "name": "Wong",
+            "address": "Av. Alfredo Benavides 1475, Lima, Perú",
+            "phoneNumber": "(01) 613-8888",
+            "website": "https://www.wong.pe/",
+            "image": "../images/wong.webp",
+            "memberLevel": 1,
+            "email": "atencionalcliente@wong.pe"
+        },
+        {
+            "name": "Tottus",
+            "address": "Paseo de la República 3220, San Isidro,Lima, Perú",
+            "phoneNumber": "(01) 602-0000",
+            "website": "https://www.tottus.com.pe",
+            "image": "../images/tottus.webp",
+            "memberLevel": 2,
+            "email": "atencionclientes@tottus.com.pe"
+        },
+        {
+            "name": "Plaza Vea",
+            "address": "Av. Alfredo Benavides 5102, Lima, Perú",
+            "phoneNumber": "(01) 625-8000",
+            "website": "https://www.plazavea.com.pe",
+            "image": "../images/plazavea.webp",
+            "memberLevel": 2,
+            "email": "servicioalcliente@spsa.pe"
+        },
+        {
+            "name": "Metro",
+            "address": "Benjamín Doig, San Borja 15036, Lima, Perú",
+            "phoneNumber": "(01) 613-8888",
+            "website": "https://www.metro.pe",
+            "image": "../images/metro.webp",
+            "memberLevel": 2,
+            "email": "atencionclientes@metro.pe"
+        },
+        {
+            "name": "Makro",
+            "address": " Av. Jorge Chavez 1209, Santiago de Surco 15049, Lima, Perú",
+            "phoneNumber": "(01) 614-9390",
+            "website": "https://www.makro.com.pe",
+            "image": "../images/makro.webp",
+            "memberLevel": 3,
+            "email": "atencionclientes@makro.com.pe"
+        },
+        {
+            "name": "Mass",
+            "address": "Av. Benavides 3879, Lima, Perú",
+            "phoneNumber": "+51 997-626-315",
+            "website": "https://www.mass.pe",
+            "image": "../images/mass.webp",
+            "memberLevel": 3,
+            "email": "servicioalcliente@tiendasmass.pe"
+        }
+    ]
+}
