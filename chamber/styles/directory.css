@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Gemunu+Libre:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary-color: #2eed2e;
+    --primary-color: #19539b;
     --second-color: #fff;
-    --third-color: #4e3e3e35;
+    --third-color: #1b1919a9;
     --fourth-color: #0000001a;
     --fifth-color: #ddd;
-    --sixth-color: #007f13;
+    --sixth-color: #14268b;
     --seventh-color: #0000ff;
-    --eighth-color: #007f13;
+    --eighth-color: #ef7930;
     --ninth-color: #005d0f;
 }
 
@@ -160,6 +160,7 @@ nav a:hover {
 .member-card img {
     border-radius: 5px;
     width: 200px;
+    height: auto;
     margin: 20px;
 }
 

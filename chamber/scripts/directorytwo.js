@@ -19,7 +19,7 @@ async function fetchNamesData() {
             <p>${member.address}</p>
             <p>${member.phoneNumber}</p>
             <a href="${member.website}" target="_blank">${member.website}</a>
-            <figure><img src="images/${member.image}" alt="${member.name}" width="200" height="auto"></figure>
+            <figure><img src="images/${member.image}" alt="${member.name}" width="200" height="auto" loading="lazy"></figure>
             `;
             namesDiv.appendChild(memberDiv);
         });
