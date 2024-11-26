@@ -1,5 +1,5 @@
 const namesDiv = document.querySelector('#names');
-const grid = document.querySelector('#grid');
+const grit = document.querySelector('#grid');
 const list = document.querySelector('#list');
 
 async function fetchNamesData() {
@@ -44,3 +44,4 @@ function showList() {
 }
 
 fetchNamesData();
+

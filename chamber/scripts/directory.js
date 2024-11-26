@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentyear = document.querySelector('#currentyear');
     const today = new Date();
 
-    currentyear.innerHTML = `&copy;<span class='highlight'>${today.getFullYear()} | Jerjes Mariluz Caciano </span>`;
+    currentyear.innerHTML = `&copy;<span class='highlight'>${today.getFullYear()} <br>Jerjes Mariluz Caciano </span>`;
 
     const lastModifiedDate = new Date(document.lastModified);
     const options = {

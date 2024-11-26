@@ -27,7 +27,7 @@ header {
     grid-template-columns: 50px auto 30px;
     align-items: center;
     background-color: var(--second-color);
-    padding: 20px;
+    padding: 30px;
 }
 
 header img {
@@ -71,7 +71,7 @@ nav a {
     font-weight: 700;
     width: 100%;
     text-align: center;
-    padding: 10px 15px;
+    padding: 20px 15px;
     border-radius: 3px;
 }
 
@@ -164,17 +164,35 @@ nav a:hover {
     margin: 20px;
 }
 
-footer {
-    max-width: 100%;
-    height: 100px;
-    text-align: center;
-    color: var(--second-color);
-    font-weight: bold;
-    align-content: center;
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fifth-color);
     background-color: var(--primary-color);
 }
 
-/*MEDIA*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.contact h3 {
+    padding: 10px 0;
+}
+
+.socials {
+    padding: 10px;
+    transition: transform 0.1s ease;
+}
+
+.socials:hover {
+    transform: scale(2); 
+}
+
+
+/*MEDIA DIRECTORY*/
 
 @media (max-width:768px) {
     nav {
@@ -203,3 +221,36 @@ footer {
         color: white;
     }
 }
+
+@media (max-width:480px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        color: var(--fifth-color);
+        background-color: var(--primary-color);
+    }
+    
+    .contact {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .socials-logos {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .modofied {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 5px;
+    }
+    
+}
+
