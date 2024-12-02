@@ -1,47 +1,54 @@
-const namesDiv = document.querySelector('#names');
-const grit = document.querySelector('#grid');
-const list = document.querySelector('#list');
+document.addEventListener('DOMContentLoaded', () => {
+    // Selección de los elementos
+    const namesDiv = document.querySelector('#names');
+    const grid = document.querySelector('#grid');
+    const list = document.querySelector('#list');
 
-async function fetchNamesData() {
-    try {
-        const response = await fetch('data/members.json');
-        if (!response.ok) {
-            throw new Error('Wrong network response');
-        }
-        const data = await response.json();
-
-        data.members.forEach((member) => {
-            const memberDiv = document.createElement('div');
-            memberDiv.classList.add('member-card');
-
-            memberDiv.innerHTML = `
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phoneNumber}</p>
-            <a href="${member.website}" target="_blank">${member.website}</a>
-            <figure><img src="images/${member.image}" alt="${member.name}" width="200" height="auto" loading="lazy"></figure>
-            `;
-            namesDiv.appendChild(memberDiv);
+    if (grid && list) {
+        grid.addEventListener('click', () => {
+            namesDiv.classList.add("grid");
+            namesDiv.classList.remove("list");
         });
 
-        namesDiv.classList.add('grid');
-
-    } catch (error) {
-        console.error('problem in operation: ', error);
+        list.addEventListener('click', showList);
     }
-};
 
-grid.addEventListener('click', () => {
-    namesDiv.classList.add("grid");
-    namesDiv.classList.remove("list");
+    function showList() {
+        namesDiv.classList.add("list");
+        namesDiv.classList.remove("grid");
+    }
+
+    async function fetchNamesData() {
+        try {
+            const response = await fetch('data/members.json');
+            if (!response.ok) {
+                throw new Error('Wrong network response');
+            }
+            const data = await response.json();
+
+            data.members.forEach((member) => {
+                const memberDiv = document.createElement('div');
+                memberDiv.classList.add('member-card');
+
+                memberDiv.innerHTML = `
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phoneNumber}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+                <figure><img src="images/${member.image}" alt="${member.name}" width="200" height="auto" loading="lazy"></figure>
+                `;
+                namesDiv.appendChild(memberDiv);
+            });
+
+            namesDiv.classList.add('grid');
+
+        } catch (error) {
+            console.error('problem in operation: ', error);
+        }
+    }
+    if (window.location.pathname === "/directorio.html") {
+        fetchNamesData();
+    }
+
+    document.getElementById('timestamp').value = new Date().getTime();
 });
-
-list.addEventListener('click', showList);
-
-function showList() {
-    namesDiv.classList.add("list");
-    namesDiv.classList.remove("grid");
-}
-
-fetchNamesData();
-
