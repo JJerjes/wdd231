@@ -117,24 +117,55 @@ const courses = [
     }
 ]
 
-function displayCourses(course) {
+function displayCourses(courseList) {
     card.innerHTML = '';
 
-    course.forEach((element) => {
+    courseList.forEach((course) => {
 
         const cardCourse = document.createElement('div');
         cardCourse.className = 'card-course';
 
         const nameSubject = document.createElement('button');
-        nameSubject.textContent = `${element.subject} ${element.number}`;
+        nameSubject.textContent = `${course.subject} ${course.number}`;
+
+        nameSubject.addEventListener('click', () => {
+            DisplayCourseDetails(course);
+        });
 
         cardCourse.appendChild(nameSubject);
-
         card.appendChild(cardCourse);
     });
 }
 
-displayCourses(courses)
+function DisplayCourseDetails(course) {
+    const modal = document.querySelector('#course-details');
+
+    modal.innerHTML = `
+        <button id="closeModal" aria-label="Close modal">❌</button>        
+        <h2>${course.subject} ${course.number}</h2>    
+        <h3>${course.title}</h3>
+        <p><b>Credits:</b> ${course.credits}</p>
+        <p><b>Certificate:</b> ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><b>Technologies:</b> ${course.technology.join(', ')}</p>
+    `;
+    modal.showModal();
+    
+    const closeModal = modal.querySelector('#closeModal');
+    closeModal.addEventListener('click', () => {
+        modal.close();
+        
+    });
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.close();
+        }
+    });
+}
+
+
+displayCourses(courses);
 
 document.querySelector('#all').addEventListener('click', () => { 
     displayCourses(courses);

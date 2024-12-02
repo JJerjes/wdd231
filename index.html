@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Activity</title>
-    <meta property="og:title" content="University Activity" />
-    <meta property="og:type" content="http://127.0.0.1:5502/index.html" />
-    <meta property="og:image" content="images/photo-lima.webp" />
+    <meta property="og:title" content="University Activity">
+    <meta property="og:type" content="http://127.0.0.1:5502/index.html">
+    <meta property="og:image" content="images/photo-lima.webp">
 
-    <link rel="canonical" href="index.html" />
+    <link rel="canonical" href="index.html">
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
@@ -69,6 +69,17 @@
       <p><span id="currentyear"></span></p>
       <p><span id="lastModified"></span></p>
     </footer>
+
+    <dialog id="course-details">
+      <div>
+        <button id="closeModal" aria-label="Close modal">❌</button>
+        <h2 id="modalSubjectNumber"></h2>
+        <h3 id="modalTitle"></h3>
+        <p>Credits:<span id="modalCredits"></span></p>
+        <p id="modalDescriprion"></p>
+        <p>Technologies:<span id="modalTechnologies"></span></p>
+      </div>
+    </dialog>
   </body>
 </html>
 

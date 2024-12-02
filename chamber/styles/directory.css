@@ -169,6 +169,7 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     color: var(--fifth-color);
+    font-weight: bold;
     background-color: var(--primary-color);
 }
 
@@ -182,6 +183,10 @@ nav a:hover {
     padding: 10px 0;
 }
 
+.contact p {
+    color: #fff;
+}
+
 .socials {
     padding: 10px;
     transition: transform 0.1s ease;
@@ -191,6 +196,15 @@ nav a:hover {
     transform: scale(2); 
 }
 
+.modofied {
+    margin: 5px;
+    padding: 10px;
+}
+
+#lastModified {
+    color: yellow;
+    font-weight: 400;
+}
 
 /*MEDIA DIRECTORY*/
 

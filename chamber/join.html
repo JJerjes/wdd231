@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="LIMA CHAMBER OF COMMERCE">
+    <meta name="description" content="LIMA CHAMBER OF COMMERCE">
+    <meta property="og:type" content="Website"> 
+    <meta property="og:image" content="./images/presentation-photo.webp">
+    <meta property="og:url" content="https://jjerjes.github.io/wdd231/chamber/directory.html">
+    <meta name="author" content="Jerjes Mariluz">
+    <title>LIMA CHAMBER OF COMMERCE</title>
+    <link rel="icon" href="assets/favicon-1.ico">
+    <link rel="stylesheet" href="../chamber/styles/directory.css">
+    <link rel="stylesheet" href="../chamber/styles/join.css">
+    <script src="../chamber/scripts/directory.js" defer></script>
+    <script src="../chamber/scripts/directorytwo.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Lima Chamber of Commerce logo" loading="lazy">
+        <h1>LIMA CHAMBER OF COMMERCE</h1>
+        <button id="menu" type="button" aria-label="Toggle menu"></button>
+    </header>
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+        <a href="#">Discover</a>
+    </nav>
+
+    <main>
+        <h1>Join</h1>
+        <div class="form-container">
+            <div class="form-column">
+                <h2>Membership Application Form</h2>
+                <form action="thankyou.html" method="get">
+                    <label for="name">First Name</label>
+                    <input type="text" id="name" name="name" required title="Enter your name" autocomplete="given-name">
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required title="Enter your Last Name" autocomplete="family-name">
+                   
+                    <label for="organizational-title">Title</label>
+                    <input type="text" id="organizational-title" name="organizational-title" required title="Enter organizational title" autocomplete="organizational-title" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s\-]{7,}" placeholder="Enter Organizational Title">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required title="Enter your Email" autocomplete="email" placeholder="Enter your Email">
+
+                    <label for="phone">Cell Phone</label>
+                    <input type="tel" id="phone" name="phone" required title="Enter your phone number" autocomplete="tel">
+
+                    <label for="membership">Membership</label>
+                    <select name="membership" id="membership" required title="select your membership level">
+                        <option value="np">Non-profit organization</option>
+                        <option value="bronze">Membership Bronze</option>
+                        <option value="silver">Membership Silver</option>
+                        <option value="gold">Membership Gold</option>
+                    </select>
+                 
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" title="description of your organization" required></textarea>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp" value="&ngt;?php echo time(); ?>">                  
+                    <input type="submit" value="Send Request">
+                </form>
+            </div>
+            <div class="form-column">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <div class="card" style="animation-delay: 0.1s;">
+                        <h3>Non Profit Membership Level</h3>
+                        <a class="a" href="#" onclick="openModal('np-modal')">Learn More</a>
+                    </div>
+                    <div class="card" style="animation-delay: 0.2s;">
+                        <h3>Bronze Membership Level</h3>
+                        <a  class="a" href="#" onclick="openModal('bronze-modal')">Learn More</a>
+                    </div>
+                    <div class="card" style="animation-delay: 0.3s;">
+                        <h3>Silver Membership Level</h3>
+                        <a  class="a" href="#" onclick="openModal('silver-modal')">Learn More</a>
+                    </div>
+                    <div class="card" style="animation-delay: 0.4s;">
+                        <h3>Gold Membership Level</h3>
+                        <a  class="a" href="#" onclick="openModal('gold-modal')">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="contact">
+            <h3>Lima Chamber of Commerce</h3>
+            <p>570 Pardos</p>
+            <p>Lima, Miraflores 999</p>
+            <p>info@limacc.org</p>
+            <p>+91 987654234</p>
+        </div>
+        <div class="socials-logos">
+            <img class="socials" src="./images/Youtube.webp" alt="Youtube" width="50">
+            <img class="socials" src="../chamber/images/twitter.webp" alt="Twitter" width="50">
+            <img class="socials" src="../chamber/images/linkedin.webp" alt="LinkedIn" width="50">
+        </div>
+        <div class="modofied">
+            <p>WDD - 231 <span id="currentyear"></span></p>
+            <p id="lastModified" ></p>
+        </div>
+    </footer>
+</body>
+</html>

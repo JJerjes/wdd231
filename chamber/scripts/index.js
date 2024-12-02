@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const currentyear = document.querySelector('#currentyear');
     const today = new Date();
-
     currentyear.innerHTML = `&copy;<span class='highlight'>${today.getFullYear()} <br>Jerjes Mariluz Caciano </span>`;
 
     const lastModifiedDate = new Date(document.lastModified);
@@ -14,13 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
         second: '2-digit',
         hour12: true
     };
-
     const formattedDate = lastModifiedDate.toLocaleString('en-US', options);
     document.getElementById("lastModified").textContent = `Last Modification: ${formattedDate}`;
+
+    fetchMembersData();
+    getCurrentWeather();
+    getForecastWeather();
+
+    const menuButton = document.querySelector('#menu');
+    const nav = document.querySelector('#nav');
+    menuButton.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        menuButton.classList.toggle('open');
+    });
 });
-
-
-// Selección de elementos por sus clases
 
 const currentTemp = document.querySelector('.current-temp');
 const weatherIcon = document.querySelector('.weather-icon');
@@ -42,11 +48,9 @@ const tomorrowLow = document.querySelector('.tomorrow-temp-low');
 const afterTomorrowHigh = document.querySelector('.after-tomorrow-temp-high');
 const afterTomorrowLow = document.querySelector('.after-tomorrow-temp-low');
 
-// API key y coordenadas (puedes ajustar las coordenadas según tu ubicación)
-const apiKey = 'ab57c9a1c16158bb10309ce9c90ea53f';  // Reemplaza con tu propia clave de API
-const lat = 24.46;  // Latitud
-const lon = 54.37;  // Longitud
-
+const apiKey = 'ab57c9a1c16158bb10309ce9c90ea53f';  
+const lat = 24.46; 
+const lon = 54.37;  
 
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
@@ -72,7 +76,6 @@ async function getCurrentWeather() {
     }
 }
 
-
 async function getForecastWeather() {
     try {
         const response = await fetch(forecastUrl);
@@ -81,10 +84,10 @@ async function getForecastWeather() {
         const data = await response.json();
         console.log('Forecast Weather:', data);
 
-        const today = data.list[0];  
-        const tomorrow = data.list[8];  
-        const afterTomorrow = data.list[16];  
-        
+        const today = data.list[0];
+        const tomorrow = data.list[8];
+        const afterTomorrow = data.list[16];
+
         todayTemp.textContent = `${today.main.temp}°C`;
         tomorrowTemp.textContent = `${tomorrow.main.temp}°C`;
         afterTomorrowTemp.textContent = `${afterTomorrow.main.temp}°C`;
@@ -102,37 +105,24 @@ async function getForecastWeather() {
     }
 }
 
-getCurrentWeather();
-getForecastWeather();
-
-// Función para cargar el archivo JSON de los miembros
 async function fetchMembersData() {
     try {
-        const response = await fetch('data/members.json');  // Ruta al archivo JSON
+        const response = await fetch('data/members.json'); 
         if (!response.ok) throw new Error('Error fetching member data');
-        
+
         const data = await response.json();
         const members = data.members;
-
-        // Filtrar miembros con nivel "Gold" (1) o "Silver" (2)
         const featuredMembers = members.filter(member => member.memberLevel === 1 || member.memberLevel === 2);
-
-        // Llamar a la función para mostrar las tarjetas de miembros seleccionados
         showFeaturedMembers(featuredMembers);
     } catch (error) {
         console.error('Failed to fetch member data:', error);
     }
 }
 
-// Función para mostrar las tarjetas de los miembros seleccionados
 function showFeaturedMembers(members) {
     const container = document.querySelector('.members-cards-container');
-    container.innerHTML = '';  // Limpiar el contenedor antes de mostrar las tarjetas
-
-    // Asegurarse de que se muestren 3 miembros
+    container.innerHTML = ''; 
     const numMembers = 3;
-
-    // Seleccionar los primeros 3 miembros, aleatoriamente si es necesario
     const randomMembers = [];
     while (randomMembers.length < numMembers) {
         const randomIndex = Math.floor(Math.random() * members.length);
@@ -141,31 +131,37 @@ function showFeaturedMembers(members) {
         }
     }
 
-    // Mostrar las tarjetas en el contenedor
     randomMembers.forEach(member => {
         const memberCard = document.createElement('div');
         memberCard.classList.add('member-card');
         memberCard.innerHTML = `
-        <h3 class="company-name">${member.name}</h3>
-        <p class="phone">Phone: ${member.phoneNumber}</p>
-        <p class="email">Email: ${member.email}</p>
-        <p class="website"><a href="${member.website}" target="_blank">Visit Website</a></p>
-        <img src="images/${member.image}" alt="${member.name}" width="200" height="auto" loading="lazy">
+            <h3 class="company-name">${member.name}</h3>
+            <p class="phone">Phone: ${member.phoneNumber}</p>
+            <p class="email">Email: ${member.email}</p>
+            <p class="website"><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <img src="images/${member.image}" alt="${member.name}" width="200" height="auto" loading="lazy">
         `;
         container.appendChild(memberCard);
     });
 }
 
-// Llamada a la función para cargar y mostrar los miembros cuando la página se cargue
-document.addEventListener('DOMContentLoaded', fetchMembersData);
-
-const formattedDate = lastModifiedDate.toLocaleString('en-US', options);
-    document.getElementById("lastModified").textContent = `Last Modification: ${formattedDate}`;
-
-    const menuButton = document.querySelector('#menu');
-    const nav = document.querySelector('#nav');
+document.addEventListener('DOMContentLoaded', () => {
+    const weatherCards = document.querySelectorAll('.weather-card');
     
-    menuButton.addEventListener('click', () => {
-        nav.classList.toggle('open');
-        menuButton.classList.toggle('open');
+    weatherCards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+            this.style.animationPlayState = 'paused';
+        });
+
+        card.addEventListener('mouseleave', function () {
+            this.style.animationPlayState = 'running';
+        });
+
+        card.addEventListener('click', function () {
+            this.style.animationPlayState = 'paused';
+            setTimeout(() => {
+                this.style.animationPlayState = 'running';
+            }, 100);  
+        });
     });
+});

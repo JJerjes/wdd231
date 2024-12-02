@@ -11,10 +11,7 @@
     <meta name="author" content="Jerjes Mariluz">
     <title>LIMA CHAMBER OF COMMERCE</title>
     <link rel="icon" href="assets/favicon-1.ico">
-    <link rel="stylesheet" href="../chamber/styles/directory.css">
     <link rel="stylesheet" href="../chamber/styles/index.css">
-    <script src="../chamber/scripts/directory.js" defer></script>
-    <script src="../chamber/scripts/directorytwo.js" defer></script>
     <script src="../chamber/scripts/index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -29,7 +26,7 @@
         <a href="index.html">Home</a>
         <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
-        <a href="discover.html">Discover</a>
+        <a href="#">Discover</a>
     </nav>
 
     <main>
@@ -37,66 +34,68 @@
             <picture class="photo-index">
                 <img  src="images/index-present.avif" alt="Hero Image" loading="lazy">
             </picture>
-            <button class="buttonOne ">Enter Chamber</button>
+            <button class="buttonOne " ><a class="join" href="join.html">Enter Join</a></button>
         </section>
         <section class="card-container">
-            <section class="event-card">
-                <h2>Events</h2>
-                <div class="event-info">
-                    <img src="images/presentation-photo.webp" alt="buy in supermarket" width="200">
-                </div>
-            </section>
-        
-            <section class="weather-card">
-                <h2>Current Weather Lima</h2>
-                <div class="weather-info">
-                    <figure class="weather-main">
-                        <span class="bold current-temp"></span>
-                        <img class="weather-icon" alt="Weather Icon" width="50" height="50">
-                        <figcaption></figcaption>
-                    </figure>
-                    <table class="weather-details">
-                        <tr class="visually-hidden"></tr>
-                        <tr>
-                            <td class="label">High:</td>
-                            <td><span class="current-high"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Low:</td>
-                            <td><span class="current-low"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Humidity:</td>
-                            <td><span class="current-humidity"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Sunrise:</td>
-                            <td><span class="current-sunrise"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="label">Sunset: </td>
-                            <td><span class="current-sunset"></span></td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
+            <div class="inner-container">
+                <section class="event-card">
+                    <h2>Events</h2>
+                    <div class="event-info">
+                        <img src="images/presentation-photo.webp" alt="buy in supermarket" width="200">
+                    </div>
+                </section>
             
-            <section class="forecast-card">
-                <h2>Weather Forecast</h2>
-                <div class="forecast-info">
-                    <table class="forecast-details">
-                        <tr class="visually-hidden"></tr>
-                        <tr>
-                            <td class="forecast-day today" colspan="2">Today: <span class="today-temp"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="forecast-day tomorrow" colspan="2">Tomorrow: <span class="tomorrow-temp"></span></td>
-                        </tr>
-                        <tr>
-                            <td class="forecast-day after-tomorrow" colspan="2">After Tomorrow: <span class="after-tomorrow-temp"></span></td>
-                        </tr>
-                    </table>
-                </div>
+                <section class="weather-card">
+                    <h2>Current Weather Lima</h2>
+                    <div class="weather-info">
+                        <figure class="weather-main">
+                            <span class="bold current-temp"></span>
+                            <img class="weather-icon" alt="Weather Icon" width="50">
+                            <figcaption></figcaption>
+                        </figure>
+                        <table class="weather-details">
+                            <tr class="visually-hidden"></tr>
+                            <tr>
+                                <td class="label">High:</td>
+                                <td><span class="current-high"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Low:</td>
+                                <td><span class="current-low"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Humidity:</td>
+                                <td><span class="current-humidity"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Sunrise:</td>
+                                <td><span class="current-sunrise"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">Sunset: </td>
+                                <td><span class="current-sunset"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                
+                <section class="forecast-card">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast-info">
+                        <table class="forecast-details">
+                            <tr class="visually-hidden"></tr>
+                            <tr>
+                                <td class="forecast-day today" colspan="2">Today: <span class="today-temp"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="forecast-day tomorrow" colspan="2">Tomorrow: <span class="tomorrow-temp"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="forecast-day after-tomorrow" colspan="2">After Tomorrow: <span class="after-tomorrow-temp"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+             </div>
             </section>           
             
         </section>
