@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="LIMA CHAMBER OF COMMERCE">
     <meta name="description" content="LIMA CHAMBER OF COMMERCE">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website"> 
     <meta property="og:image" content="/images/index-present.avif">
     <meta property="og:url" content="https://jjerjes.github.io/wdd231/chamber/directory.html">
     <meta name="author" content="Jerjes Mariluz">
@@ -44,19 +45,16 @@
                     <input type="text" id="lastName" name="lastName" required title="Enter your Last Name" autocomplete="family-name">
                    
                     <label for="organizational-title">Organizational Title</label>
-                    <input type="text" id="organizational-title" name="organizational-title" required 
-                           title="Enter organizational title" placeholder="Enter Organizational Title"
-                           pattern="^[A-Za-z\s-]{7,}$" autocomplete="organization-title">
+                    <input type="text" id="organizational-title" name="organizational-title" required title="Enter organizational title" placeholder="Enter Organizational Title" pattern="^[A-Za-z\s-]{7,}$" autocomplete="organization-title">
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required title="Enter your Email" autocomplete="email" placeholder="Enter your Email">
 
                     <label for="phone">Cell Phone</label>
-                    <input type="tel" id="phone" name="phone" required title="Enter your phone number" 
-                           pattern="^\d{10}$" autocomplete="tel">
+                    <input type="tel" id="phone" name="phone" required title="Enter your phone number" autocomplete="tel">
 
                     <label for="membership">Membership</label>
-                    <select name="membership" id="membership" required title="Select your membership level" autocomplete="membership-level">
+                    <select name="membership" id="membership" required title="select your membership level">
                         <option value="" disabled selected>Select a Membership Level</option>
                         <option value="np">Non-profit organization</option>
                         <option value="bronze">Membership Bronze</option>
@@ -65,9 +63,9 @@
                     </select>
                  
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" title="Description of your organization" required></textarea>
+                    <textarea name="description" id="description" title="description of your organization" required></textarea>
                     
-                    <input type="hidden" id="timestamp" name="timestamp" value="">
+                    <input type="hidden" id="timestamp" name="timestamp" value="&ngt;?php echo time(); ?>">                  
                     <input type="submit" value="Send Request">
                 </form>
             </div>
@@ -80,15 +78,15 @@
                     </div>
                     <div class="card" style="animation-delay: 0.2s;">
                         <h3>Bronze Membership Level</h3>
-                        <a class="a" href="#" onclick="openModal('bronze-modal')">Learn More</a>
+                        <a  class="a" href="#" onclick="openModal('bronze-modal')">Learn More</a>
                     </div>
                     <div class="card" style="animation-delay: 0.3s;">
                         <h3>Silver Membership Level</h3>
-                        <a class="a" href="#" onclick="openModal('silver-modal')">Learn More</a>
+                        <a  class="a" href="#" onclick="openModal('silver-modal')">Learn More</a>
                     </div>
                     <div class="card" style="animation-delay: 0.4s;">
                         <h3>Gold Membership Level</h3>
-                        <a class="a" href="#" onclick="openModal('gold-modal')">Learn More</a>
+                        <a  class="a" href="#" onclick="openModal('gold-modal')">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -113,3 +111,5 @@
             <p id="lastModified" ></p>
         </div>
     </footer>
+</body>
+</html>
