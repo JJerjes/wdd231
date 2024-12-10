@@ -5,7 +5,7 @@
             "address": "Av. José Pardo 715, Lima, Perú",
             "phoneNumber": "(01) 620-3000",
             "website": "https://www.vivanda.com.pe/",
-            "image": "../images/vivanda.webp",
+            "image": "images/vivanda.webp",
             "memberLevel": 1,
             "email": "servicioalcliente@vivanda.com"
         },
@@ -14,7 +14,7 @@
             "address": "Av. Alfredo Benavides 1475, Lima, Perú",
             "phoneNumber": "(01) 613-8888",
             "website": "https://www.wong.pe/",
-            "image": "../images/wong.webp",
+            "image": "images/wong.webp",
             "memberLevel": 1,
             "email": "atencionalcliente@wong.pe"
         },

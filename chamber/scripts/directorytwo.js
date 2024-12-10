@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Selección de los elementos
     const namesDiv = document.querySelector('#names');
     const grid = document.querySelector('#grid');
     const list = document.querySelector('#list');
@@ -46,9 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('problem in operation: ', error);
         }
     }
-    if (window.location.pathname === "/directorio.html") {
+    if (window.location.pathname === "directorio.html") {
         fetchNamesData();
     }
-
-    document.getElementById('timestamp').value = new Date().getTime();
 });
