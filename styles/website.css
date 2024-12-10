@@ -1,0 +1,37 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ddd;
+    color: #333;
+}
+header, footer {
+    background-color: #19539b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+h1 {
+    color: #ddd;
+}
+
+h2 {
+    color: #19539b;
+}
+section {
+    margin: 20px;
+}
+ul {
+    line-height: 1.8;
+}
+.color-scheme {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.color-box {
+    width: 50px;
+    height: 50px;
+}
+.wireframe {
+    margin: 20px 0;
+    text-align: center;
+}
