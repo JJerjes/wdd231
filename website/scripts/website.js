@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Testimonials logic
     const testimonials = [
         {
             name: "Erika Salazar",

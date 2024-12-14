@@ -1,4 +1,3 @@
-// modal.js
 export function openModal() {
     const modal = document.getElementById('modal');
     modal.showModal();
@@ -11,7 +10,7 @@ export function closeModal() {
 
 export function setupModalEvents() {
     const modal = document.getElementById('modal');
-    const closeButton = document.getElementById('close');  // Asegúrate de que el ID sea 'close'
+    const closeButton = document.getElementById('close'); 
 
     closeButton.addEventListener('click', function() {
         closeModal();

@@ -17,13 +17,11 @@ html, body {
     flex-direction: column;
 }
 
-/* Body */
 body {
     font-family: 'Montserrat', sans-serif;
     
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: center;
@@ -36,7 +34,6 @@ header img {
     padding: 20px;
 }
 
-/* Menu */
 nav {
     display: flex;
     justify-content: space-between;
@@ -59,7 +56,6 @@ nav a:hover {
     background-color: var(--third-color);
 }
 
-/* Menu Toggle */
 #menu {
     font-size: 1.5rem;
     border: none;
@@ -84,7 +80,6 @@ nav a:hover {
     content: '❌';
 }
 
-/* Main Content */
 main {
     flex-grow: 1;
 }

@@ -8,7 +8,6 @@
     --bg-dark: #3b5998;
 }
 
-/* Estilos generales para el main */
 main {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-light);
@@ -16,7 +15,6 @@ main {
     text-align: center;
 }
 
-/* Estilos para las secciones */
 section {
     margin: 30px auto;
     padding: 20px;
@@ -26,7 +24,6 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Títulos principales */
 #about-us h1,
 #mission h2,
 #vision h2 {
@@ -35,7 +32,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* Párrafos dentro de las secciones */
 #about-us p,
 #mission p,
 #vision p {
@@ -45,10 +41,7 @@ section {
     margin-bottom: 20px;
 }
 
-/* Estilo para los enlaces */
-
-
-/* Hacer las secciones responsivas */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
     section {
         padding: 15px;
