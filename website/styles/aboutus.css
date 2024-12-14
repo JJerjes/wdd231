@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #19539b; 
+    --second-color: #fff; 
+    --third-color: #5cfa077c;
+    --fourth-color: #00000046; 
+    --highlight-color: #f9a825;
+    --bg-light: #f1f1f1; 
+    --bg-dark: #3b5998;
+}
+
+/* Estilos generales para el main */
+main {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Estilos para las secciones */
+section {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    background-color: var(--second-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos principales */
+#about-us h1,
+#mission h2,
+#vision h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Párrafos dentro de las secciones */
+#about-us p,
+#mission p,
+#vision p {
+    font-size: 1.1em;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los enlaces */
+
+
+/* Hacer las secciones responsivas */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    #about-us h1,
+    #mission h2,
+    #vision h2 {
+        font-size: 1.8em;
+    }
+
+    #about-us p,
+    #mission p,
+    #vision p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 375px) {
+    #about-us h1,
+    #mission h2,
+    #vision h2 {
+        font-size: 1.6em;
+    }
+
+    #about-us p,
+    #mission p,
+    #vision p {
+        font-size: 0.95em;
+    }
+}
